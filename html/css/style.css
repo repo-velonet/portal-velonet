@@ -1,0 +1,211 @@
+/* Novo Front - Diego Fox */
+
+body{
+	background-color: #eee;
+	color: #666666;
+	font-family: 'Roboto', sans-serif;
+	background-image: url(../img/footer.png);
+	background-position: bottom center;
+	background-repeat: no-repeat;
+}
+
+img{
+	width: 100%;
+}
+
+section {
+	padding: 60px 0;
+}
+
+section .section-title {
+	text-align: center;
+	color: #305893;
+	margin-bottom: 50px;
+	text-transform: uppercase;
+}
+
+
+.logo_cidacs img{
+  max-width: 470px;
+}
+
+#team .card {
+	border-radius: 24px;
+	background-color: #fff;
+	-webkit-box-shadow: 5px 5px 5px -2px rgba(0,0,0,0.35); 
+	box-shadow: 5px 5px 5px -2px rgba(0,0,0,0.35);
+}
+
+hr.header{
+	border-top: 1px solid #A3A3A3;
+}
+
+#team .card hr {
+	margin-top: 0px;
+	margin-bottom: 20px;
+	border-top: 1px solid #ddd;
+}
+
+#team  .backside .card hr {
+	margin-top: 0px;
+	margin-bottom: 20px;
+	border-top: 1px solid #000;
+}
+
+#team .glpiNti .card {
+	background-color: #004FC6;
+}
+.glpiNti .btn {
+	color: #004FC6 !important;
+}
+
+#team .glpiSi .card {
+	background-color: #557C1E;
+}
+.glpiSi .btn {
+	color: #557C1E !important;
+}
+
+#team .glpiNOP .card {
+	background-color: #7B0B05;
+}
+.glpiNOP .btn {
+	color: #7B0B05 !important;
+}
+
+#team .confluence .card {
+	background-color: #00337C;
+}
+.confluence .btn {
+	color: #00337C !important;
+}
+
+#team .jira .card {
+	background-color: #2796FF;
+}
+.jira .btn {
+	color: #2796FF !important;
+}
+
+#team .dataverse .card {
+	background-color: #C85C28;
+}
+.dataverse .btn {
+	color: #C85C28 !important;
+}
+
+#team .dataverseHomologacao .card {
+	background-color: #31708F;
+}
+.dataverseHomologacao .btn {
+	color: #31708F !important;
+}
+
+#team .rocketChat .card {
+	background-color: #BA2026;
+}
+.rocketChat .btn {
+	color: #BA2026 !important;
+}
+
+#team .zabbix .card {
+	background-color: #D31F26;
+}
+.zabbix .btn {
+	color: #D31F26 !important;
+}
+
+.image-flip:hover .backside,
+.image-flip.hover .backside {
+	transform: rotateY(0deg);
+	border-radius: .25rem;
+}
+
+.image-flip:hover .frontside,
+.image-flip.hover .frontside {
+	transform: rotateY(180deg);
+}
+
+.mainflip {
+	-webkit-transition: 1s;
+	-webkit-transform-style: preserve-3d;
+	-ms-transition: 1s;
+	-moz-transition: 1s;
+	-moz-transform: perspective(1000px);
+	-moz-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	transition: 1s;
+	transform-style: preserve-3d;
+	position: relative;
+}
+
+.frontside {
+	position: relative;
+	-webkit-transform: rotateY(0deg);
+	-ms-transform: rotateY(0deg);
+	z-index: 2;
+	margin-bottom: 30px;
+}
+
+.backside {
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: rotateY(-180deg);
+}
+
+.frontside,
+.backside {
+	backface-visibility: hidden;
+	transition: 1s;
+	transform-style: preserve-3d;
+}
+
+.frontside .card,
+.backside .card {
+	min-height: 312px;
+}
+
+.backside .card a {
+	font-size: 18px;
+}
+
+.frontside .card .card-title,
+.backside .card .card-title {
+	font-weight: bold;
+}
+
+.frontside .card .card-body img {
+	width: auto;
+	height: 100%;
+	max-width: 137px;
+	max-height: 80px;
+	margin: 50px 0;
+}
+.card-text{
+	margin: 0 auto;
+	font-weight: 300;
+	font-size: 16px;
+}
+.card-body{
+	max-width: 80%;
+	margin: 0 auto;
+	color: #666;
+}
+.backside .card-body{
+	color: #fff;
+	padding: 50px 0;
+	min-height: 260px;
+	position: relative;
+}
+.btn-light{
+	background-color: #fff;
+	padding: 0;
+	width: 45px;
+	height: 45px;
+	line-height: 45px;
+	border-radius: 10px;
+	position: absolute;
+	bottom: 0;
+	left: 45%;
+}
