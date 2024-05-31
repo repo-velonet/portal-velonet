@@ -19,9 +19,69 @@
             <div class="row">
                 <div class="col-sm-10 logo_velonet"><img src="img/velonet.png" style="width: 30vw; min-width: 330px"  alt=”VELONET” ></div>
                 <div class="col-sm-2 text-right info">
-                    Portal de Serviços e Tecnologia Velonet
+			<h4>Portal de Serviços e Tecnologia Velonet</h4>
                     <iframe width="125" height="125" src="https://relogioonline.com.br/embed/horario/Lagos_AO/Angola+(Luanda)/#theme=0&ampm=0&showdate=1" frameborder="0" allowfullscreen></iframe>
-                </div>
+                <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0">
+    <h5>Seu Endereço IP:</h5>
+    <p id="ip-address">Carregando...</p>
+
+    <script>
+        fetch('https://api64.ipify.org?format=json')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('ip-address').innerText = data.ip;
+            })
+            .catch(error => {
+                console.error('Erro ao buscar o endereço IP:', error);
+            });
+    </script>
+
+
+<h4>Sua Localização Atual:</h4>
+    <p id="location">Carregando...</p>
+    <script>
+        function showPosition(position) {
+            var latitude = position.coords.latitude;
+            var longitude = position.coords.longitude;
+            var accuracy = position.coords.accuracy;
+
+            var locationText = 'Latitude: ' + latitude + ', Longitude: ' + longitude + ', Precisão: ' + accuracy + ' metros';
+            document.getElementById('location').innerText = locationText;
+        }
+
+        function showError(error) {
+            switch(error.code) {
+                case error.PERMISSION_DENIED:
+                    document.getElementById('location').innerText = "Permissão para obter localização negada pelo usuário.";
+                    break;
+                case error.POSITION_UNAVAILABLE:
+                    document.getElementById('location').innerText = "Informações de localização indisponíveis.";
+                    break;
+                case error.TIMEOUT:
+                    document.getElementById('location').innerText = "Tempo limite expirado ao tentar obter a localização.";
+                    break;
+                case error.UNKNOWN_ERROR:
+                    document.getElementById('location').innerText = "Ocorreu um erro desconhecido ao tentar obter a localização.";
+                    break;
+            }
+        }
+
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition, showError);
+        } else {
+            document.getElementById('location').innerText = "Geolocalização não é suportada pelo seu navegador.";
+        }
+    </script>
+
+
+
+
+
+		</div>
             </div>
         </div>
         <hr class="header">
@@ -30,7 +90,7 @@
                 <div class="row">
                     <center>
                     </center>
-                    <!-- Gdrive -->
+		    <!-- Gdrive -->
 <div class="col-xs-12 col-sm-6 col-md-4">
         <div class="mainflip">
             <div class="frontside">
