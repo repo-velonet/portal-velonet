@@ -1,0 +1,14 @@
+version: '3.8'
+networks:
+  net:
+    driver: overlay
+    attachable: true
+services:
+  nginx:
+    image: nginx:1-alpine
+    ports:
+      - 41980:80
+    volumes:
+      - ./var/dados/containers/portal-velonet:/var/www/html:ro
+    networks:
+      - net
