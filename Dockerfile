@@ -1,10 +1,16 @@
+# Use a imagem oficial do Nginx como base
+FROM nginx:latest
 
+# Instale o Git
+RUN apt-get update && \
+    apt-get install -y git
 
-### Copiando arquivos do projeto para o html
-COPY bootstrap ./var/www/html
-COPY font-awesome ./var/www/html
-COPY img ./var/www/html
-COPY js ./var/www/html
-COPY velonet ./var/www/html
-COPY index.html ./var/www/html
+# Defina o diretório de trabalho como o diretório padrão do Nginx
+WORKDIR /var/www/html/
+
+# Clone o repositório do Git que contém o index.html desejado
+RUN git clone https://github.com/repo-velonet/portal-velonet.git .
+
+# Exponha a porta 80 do contêiner
+EXPOSE 80
 
