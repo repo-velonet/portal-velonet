@@ -9,6 +9,6 @@ services:
     ports:
       - 80:80
     volumes:
-      - ./var/dados/containers/portal-velonet:/var/www/html:ro
+      - ./var/www/html:/var/www/html:ro
     networks:
       - net
