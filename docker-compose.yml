@@ -5,10 +5,13 @@ networks:
     attachable: true
 services:
   nginx:
+    build:
+      context: .
+      dockerfile: Dockerfile
     image: nginx:1-alpine
     ports:
       - 80:80
     volumes:
-      - ./var/dados/containers/portal-velonet:/var/www/html:ro
+      - /var/www/html:/var/www/html:ro
     networks:
       - net
