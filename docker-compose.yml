@@ -12,6 +12,6 @@ services:
     ports:
       - 80:80
     volumes:
-      - /var/www/html:/var/www/html:ro
+      - /var/www/html:/var/www/html:rw
     networks:
       - net
