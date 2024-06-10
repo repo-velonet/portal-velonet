@@ -5,6 +5,9 @@ networks:
     attachable: true
 services:
   nginx:
+    build:
+      context: .
+      dockerfile: Dockerfile
     image: nginx:1-alpine
     ports:
       - 80:80
